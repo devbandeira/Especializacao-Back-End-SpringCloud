@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/codigo.iml" filepath="$PROJECT_DIR$/.idea/codigo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/src/main/main.iml" filepath="$PROJECT_DIR$/weather/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/src/test/test.iml" filepath="$PROJECT_DIR$/weather/src/test/test.iml" />

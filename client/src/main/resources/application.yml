@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8081}
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: qa
+  application:
+    name: client-service
+
+#    import: optional:configserver:http://localhost:8888/ -> referenciando o servidor de configuracao
+
+
+#A5 - Os arquivos de CONFIG que vem do meu GIT sao identificados atraves do   application: name: client-service, dessa forma quando chega no GIT ele encontra o doc com esse nome
+#trazendo as configurações aplicando ao meu service. Se por acaso eu quiser separar por ambientes DEV-QA, etc.
+#A5 - Preciso passar outro parametro abaixo do application: name:, qual dos ambientes eu vou estar referenciando no arquivo
+#A5 - Automaticamente no meu git eu preciso tambem configurar o nome dos meus arquivos .yml de acordo.
+
+#A5 -   Parte do application.yml que faz o arquivo procurado no git ser escolhido somando o name: client-service + profile: qa. Encotnrando no git o arquivo client-service-qa.yml
+#cloud:
+#    config:
+#      profile: qa
+
+#posso usar tambem
+    # profile: ${PROFILE:dev}, se nao encontrar na variavel de AMBIENTE PROFILE, entao assumira o perfil de dev.

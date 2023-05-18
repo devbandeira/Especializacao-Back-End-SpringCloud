@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:8086}
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  application:
+    name: weather-service
+
+
+#A estrutura do .yml e parecida com o .properties. Antes era usado o ponto (.) para separar, agora é a identacao com os dois pontos(:)
+#server.port = 8761 passa a ser server: port:8761
+
+#Se eu rodar aqui o CLIENT WEATHER, ele vai tentar ir no meu servidor de configuracao que ta rodando na porta 8888   config: import: optional:configserver:http://localhost:8888/
+#A partir do momento que ele rodar, ele vai pegar as configurações no meu config
+
+#Teoricamente eu poderia ignorar o treco de  server: port: ${PORT:8086}, pois ela ja vem do meu CONFIG SERVER que busca do meu GIT e traz para o service

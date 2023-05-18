@@ -5,33 +5,30 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.11</version>
+		<version>2.7.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.weather</groupId>
-	<artifactId>weather</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>weather-service</name>
-	<description>Weather Service</description>
+	<name>client-service</name>
+	<description>Client Service</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 	</properties>
 	<dependencies>
-<!--		Adicionando o actuator aqui no eureka client, no SERVER eureka nao e necessario, apos adicionar e necessario fazer configuracoes para que consigo fazer a requisicao-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+<!--	"spring-cloud-starter-config"	Dependencia que faz ele se ligar no meu CLOUD CONFIG -> no meu servico CONFIG, onde fica minhas configuracoes de cada servico, centralizada.
+O servico CONFIG vai buscar a configuracao para cada servico no meu GITHUB de acordo com o que cada CLIENT estiver necessitando, caso não encontre o arquivo de configuracao especifica no github
+ela vai buscar pelo arquivo mais generico
+-->		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

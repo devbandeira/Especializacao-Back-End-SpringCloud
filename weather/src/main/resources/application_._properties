@@ -1,0 +1,33 @@
+#Qual porta o microservico vai rodar
+server.port = 8785
+
+#Nome que ele vai se registrar dentro do eureka
+spring.application.name = eureka-service
+
+#Em qual endpoit ele tem que se registrar - No caso meu CLIENT aqui vai utilizar esse endpoit para se registrar
+eureka.client.service-url.defaultZone = http://localhost:8761/eureka/
+
+message = Message to test
+
+
+#Liberando todas as rotas de informacoes do ACTUATOR
+management.endpoints.enabled-by-default=true
+management.endpoints.web.exposure.include=*
+#https://www.zup.com.br/blog/spring-actuator
+#https://www.digitalocean.com/community/tutorials/spring-boot-actuator-endpoints
+#habilitando por ROTA
+#management.info.env.enabled = true
+#management.endpoints.web.exposure.include = health, info
+
+
+#o ACTUATOR por padrao ja vem no EUREKA server, sendo necessario por a extensao somente nos SERVICOS la no POM.XML
+
+#Informações que quero printar na tela quando chamar a rota info.
+info.author = Alexander B.
+info.mail = dev.bandeira@outlook.com
+
+#Falando sobre a aula 5
+#A ideia e trabalhar o padrao do servidor de configuracao
+#Problematica: Se tenho 20 microsservice e quero que eles mostre as infos em todos os micro, tenho que pegar as linhsa info.author, mail, management.info.env.enabled = true e por em cada servico
+#Solucao: criar um arquivo especifico e por a solucao que seja compartilhado por todos. E quando for buscar no arquivo especifico, o que nao encontrar ele vai buscar um generico
+#E vamos comecar a trabalhar com arquivo .yml, vou desativar o properties entao. Criando o application.yml
