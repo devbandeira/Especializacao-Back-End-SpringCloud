@@ -5,9 +5,9 @@ spring:
     import: optional:configserver:http://localhost:8888/
   cloud:
     config:
-      profile: qa
+      profile: qa #Informar o profile que quero que ele siga ${PROFILE:dev} variavel de ambiente, se não ele vai para dev. Aqui no exemplo ele vai para QA.
   application:
-    name: client-service
+    name: client-service #Informar o nome dele para ele saber o arquivo que ele vai considerar no meu servidor de configuração no GIT nesse caso
 
 #    import: optional:configserver:http://localhost:8888/ -> referenciando o servidor de configuracao
 

@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  application:
+    name : course-service #nome para ele reconhecer qual arquivo ele vai buscar no servidor de config
+
+
+#Nao tem config de PORT porque ja fiz no meu repositorio. Se a porta estiver aqui, e o microservico cair ela n vai garantir que ela continue tendo comunicacao com o EUREKA server
+#é somente a porta onde ele vai rodar mesmo, entao como se o servidor cair ele n vai ter nenhuma porta, saberemos que deu problema.
+#

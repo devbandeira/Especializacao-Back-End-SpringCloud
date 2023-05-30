@@ -12,7 +12,7 @@ spring:
 
 #Digo qual porta ele vai rodar
 #Nome do serviço
-#Onde e o repositorio git que ele vai buscar as configuracoes
+#Onde e o repositorio git que ele vai buscar as configuracoes (URI)
 
 #Se dentro do meu git eu nao tiver um arquivo weather-service para executar o meu cliente WEATHER. Entao ele puxa as configurações dentro do application.yml que e o mais generico no meu git
 #

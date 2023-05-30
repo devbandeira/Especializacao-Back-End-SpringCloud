@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/codigo.iml" filepath="$PROJECT_DIR$/.idea/codigo.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course/course.iml" filepath="$PROJECT_DIR$/course/course.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/src/main/main.iml" filepath="$PROJECT_DIR$/weather/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subscription/subscription.iml" filepath="$PROJECT_DIR$/subscription/subscription.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/src/test/test.iml" filepath="$PROJECT_DIR$/weather/src/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/weather.iml" filepath="$PROJECT_DIR$/weather/weather.iml" />
     </modules>

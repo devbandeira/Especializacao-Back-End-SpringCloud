@@ -8,36 +8,47 @@
 		<version>2.7.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>client</artifactId>
+	<groupId>com.example.subscription</groupId>
+	<artifactId>subscription</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>client-service</name>
-	<description>Client Service</description>
+	<name>subscription-service</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-<!--	"spring-cloud-starter-config"	Dependencia que faz ele se ligar no meu CLOUD CONFIG -> no meu servico CONFIG, onde fica minhas configuracoes de cada servico, centralizada.
-O servico CONFIG vai buscar a configuracao para cada servico no meu GITHUB de acordo com o que cada CLIENT estiver necessitando, caso não encontre o arquivo de configuracao especifica no github
-ela vai buscar pelo arquivo mais generico
-Essa dependencia faz a gente ser obrigado a informar as informações do servidor de configuração que ele vai se conectar
-- Faz ele ser um cliente do servidor de configuração -É preciso informar o application.yml informar os dados do servidor de config
--->		<dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-<!--		Vai precisar registrar no eureka como serviço-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -48,7 +59,6 @@ Essa dependencia faz a gente ser obrigado a informar as informações do servido
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!--		Spring devTOOLS, LOMBOK STARTER WEB (TOMCAT) e ACTURATOR dependencias para facilitar o desenvolvimento -->
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="weather" />
         <module name="client" />
+        <module name="course" />
+        <module name="subscription" />
         <module name="config" />
         <module name="eureka" />
       </profile>
@@ -16,7 +18,9 @@
     <bytecodeTargetLevel>
       <module name="client" target="17" />
       <module name="config" target="17" />
+      <module name="course" target="11" />
       <module name="eureka" target="17" />
+      <module name="subscription" target="11" />
       <module name="weather" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -24,7 +28,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="client" options="-parameters" />
       <module name="config" options="-parameters" />
+      <module name="course" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="subscription" options="-parameters" />
       <module name="weather" options="-parameters" />
     </option>
   </component>
